@@ -268,7 +268,7 @@ img {
    ============================================ */
 .hero__scroll-arrow {
   position: absolute;
-  bottom: 24px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -1004,7 +1004,7 @@ img {
 .product-gallery {
   background: #ffffff;
   color: #290F13;
-  padding: 110px 24px 0px 24px;
+  padding: 110px 24px 50px 24px;
   overflow: visible;
 }
 
