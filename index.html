@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Save the day - Khám phá loại da đầu của bạn và nhận đề xuất chăm sóc phù hợp.">
+  <title>Save the day | Chăm sóc da đầu đúng cách</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="page-wrapper">
+  <!-- Hero Section -->
+  <section class="hero page-section" id="hero">
+    <div class="hero__overlay"></div>
+    <img src="hero-bg.png" alt="Save the day hero" class="hero__image">
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+      <nav class="navbar__inner">
+        <div class="navbar__left">
+          <a href="#intro" class="navbar__link">
+            <span class="navbar__dot"></span>
+            <span class="navbar__link-text">THỰC TRẠNG</span>
+          </a>
+          <a href="#problems" class="navbar__link">
+            <span class="navbar__dot"></span>
+            <span class="navbar__link-text">VẤN ĐỀ</span>
+          </a>
+        </div>
+        <div class="navbar__center">
+          <a href="#" class="navbar__logo" id="logo">
+            <img src="https://savetheday.kr/web/upload/logo/logo.svg" alt="Save the day" class="navbar__logo-img">
+          </a>
+        </div>
+        <div class="navbar__right">
+          <a href="#product-gallery" class="navbar__link">
+            <span class="navbar__dot"></span>
+            <span class="navbar__link-text">SẢN PHẨM</span>
+          </a>
+          <a href="#quiz" class="navbar__link">
+            <span class="navbar__dot"></span>
+            <span class="navbar__link-text">KHẢO SÁT</span>
+          </a>
+          <button class="navbar__hamburger" id="hamburger" aria-label="Open menu">
+            <span class="navbar__hamburger-line"></span>
+            <span class="navbar__hamburger-line"></span>
+            <span class="navbar__hamburger-line"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <div class="hero__content" id="hero-content">
+      <h1 class="hero__headline">Bạn có biết da đầu mình<br>thuộc loại nào?</h1>
+      <p class="hero__subheadline">Đa số người Việt đang chăm sóc da đầu sai cách.</p>
+    </div>
+
+    <div class="hero__tagline" id="hero-tagline">
+      <p class="hero__tagline-title">KIỂM TRA DA ĐẦU MIỄN PHÍ — CHỈ MẤT 2 PHÚT</p>
+      <p class="hero__tagline-subtitle">NHẬN NGAY SẢN PHẨM PHÙ HỢP VÀ ƯU ĐÃI 15% CHO ĐƠN HÀNG ĐẦU TIÊN</p>
+    </div>
+
+    <div class="hero__scroll-arrow" id="hero-scroll-arrow">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- Fixed Navigation Bar (visible from page 2+) -->
+  <nav class="fixed-nav" id="fixed-nav">
+    <div class="fixed-nav__inner">
+      <div class="fixed-nav__group">
+        <a href="#intro" class="fixed-nav__link">THỰC TRẠNG</a>
+        <a href="#problems" class="fixed-nav__link">VẤN ĐỀ</a>
+      </div>
+      <a href="#hero" class="fixed-nav__logo">
+        <img src="https://savetheday.kr/web/upload/logo/logo.svg" alt="Save the day">
+      </a>
+      <div class="fixed-nav__group">
+        <a href="#product-gallery" class="fixed-nav__link">SẢN PHẨM</a>
+        <a href="#quiz" class="fixed-nav__link">KHẢO SÁT</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Intro Section (Page 2) -->
+  <section class="intro page-section" id="intro">
+    <div class="intro__inner">
+      <h2 class="intro__heading">Thực trạng tóc<br>hiện nay</h2>
+
+      <div class="intro__divider">
+        <span class="intro__divider-left">CHĂM SÓC DA ĐẦU CHUYÊN SÂU</span>
+        <span class="intro__divider-right">THƯƠNG HIỆU CHÍNH HÃNG HÀN QUỐC</span>
+      </div>
+
+      <div class="intro__grid">
+        <!-- Left Column -->
+        <div class="intro__col intro__col--left">
+          <div class="intro__card">
+            <span class="intro__label">TRIẾT LÝ THƯƠNG HIỆU</span>
+            <h3 class="intro__card-title">Every peaceful day, naturally saved.</h3>
+            <h3 class="intro__card-title">Save the Day, Save Your Moment.</h3>
+          </div>
+          <a href="#quiz" class="intro__btn">
+            <span>Kiểm tra da đầu ngay</span>
+            <span class="intro__btn-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </span>
+          </a>
+        </div>
+
+        <!-- Center Column: Image -->
+        <div class="intro__col intro__col--center">
+          <div class="intro__img-wrap">
+            <img src="3.jpg" alt="Save The Day scalp care" class="intro__img">
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="intro__col intro__col--right">
+          <div class="intro__card intro__card--stat">
+            <span class="intro__label">SỐ LIỆU THỰC TẾ</span>
+            <h3 class="intro__stat">78% người Việt</h3>
+            <p class="intro__card-sub">Gặp vấn đề về da đầu do khí hậu nóng ẩm</p>
+          </div>
+
+          <div class="intro__info">
+            <p class="intro__text">Tại Save The Day, chăm sóc da đầu không chỉ là gội đầu — đó là cả một hành trình khoa học. Dù bạn đang gặp vấn đề hay muốn phòng ngừa, chúng tôi có giải pháp.</p>
+            <div class="intro__socials">
+              <a href="#" class="intro__social" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+              <a href="#" class="intro__social" aria-label="Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="#" class="intro__social" aria-label="X">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="#" class="intro__social" aria-label="YouTube">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problems Section -->
+  <section class="problems page-section" id="problems">
+    <div class="problems__header">
+      <span class="problems__badge">VẤN ĐỀ CHÍNH</span>
+      <h2 class="problems__title">Tại sao da đầu bạn đang&nbsp;"kêu cứu"?</h2>
+      <p class="problems__desc">Nhiều yếu tố hàng ngày đang âm thầm gây hại cho da đầu<br>mà bạn không hề hay biết.</p>
+    </div>
+
+    <div class="prb-gallery">
+      <button class="prb-arrow prb-arrow--prev" id="prb-prev" aria-label="Vấn đề trước">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="prb-track">
+        <div class="prb-card is-active" data-index="0">
+          <span class="prb-card__num">01</span>
+          <h3 class="prb-card__title">Khí hậu<br>nóng ẩm</h3>
+          <div class="prb-card__divider"></div>
+          <p class="prb-card__desc">Nhiệt độ và độ ẩm cao khiến tuyến bã nhờn hoạt động mạnh — da đầu tiết dầu nhanh chỉ sau vài giờ gội, gây bết dính và ngứa ngáy triền miên.</p>
+          <span class="prb-card__tag">Da đầu nhờn · Bết tóc</span>
+        </div>
+        <div class="prb-card is-next" data-index="1">
+          <span class="prb-card__num">02</span>
+          <h3 class="prb-card__title">Đội nón<br>bảo hiểm</h3>
+          <div class="prb-card__divider"></div>
+          <p class="prb-card__desc">Đội mũ bảo hiểm nhiều giờ mỗi ngày tạo môi trường bí bách, bít tắc lỗ chân lông và tích tụ vi khuẩn gây viêm da đầu mãn tính.</p>
+          <span class="prb-card__tag">Bít tắc lỗ chân lông · Vi khuẩn</span>
+        </div>
+        <div class="prb-card is-prev" data-index="2">
+          <span class="prb-card__num">03</span>
+          <h3 class="prb-card__title">Ô nhiễm<br>môi trường</h3>
+          <div class="prb-card__divider"></div>
+          <p class="prb-card__desc">Bụi mịn PM2.5 và khí thải độc hại bám sâu vào da đầu mỗi ngày, làm yếu chân tóc, gây viêm nhiễm âm ỉ và rụng tóc sớm khó phục hồi.</p>
+          <span class="prb-card__tag">Yếu chân tóc · Rụng tóc sớm</span>
+        </div>
+      </div>
+      <button class="prb-arrow prb-arrow--next" id="prb-next" aria-label="Vấn đề tiếp theo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Product Gallery Section -->
+  <section class="product-gallery" id="product-gallery">
+    <div class="gallery__container">
+      <div class="gallery__header">
+        <span class="gallery__badge">SẢN PHẨM CỦA CHÚNG TÔI</span>
+        <h2 class="gallery__title">Giải pháp từ thiên nhiên cho da đầu khoẻ mạnh</h2>
+        <p class="gallery__subtitle">Công thức thuần chay, chiết xuất thảo dược cao cấp — được phát triển riêng cho da đầu người Việt.</p>
+      </div>
+
+      <div class="gallery__grid">
+        <!-- Product 1 -->
+        <div class="gallery__item">
+          <a href="https://savetheday.kr/product/water-hyssop-reinforcing-shampoo/20/category/1/display/2/" target="_blank" class="gallery__link">
+            <div class="gallery__img-wrap">
+              <img src="5.png" alt="Water-Hyssop Reinforcing Shampoo" class="gallery__img">
+            </div>
+            <div class="gallery__info">
+              <span class="gallery__category">Dầu gội · Da đầu nhờn & rụng tóc</span>
+              <h3 class="gallery__name">Water-Hyssop Reinforcing Shampoo</h3>
+              <p class="gallery__desc">Dầu gội cân bằng da đầu với chiết xuất Rau Má Nước (10,000ppm), Copper Peptide và Exosome. Kiểm soát bã nhờn, làm dịu da đầu nhạy cảm và hỗ trợ giảm rụng tóc.</p>
+              <div class="gallery__meta">
+                <span class="gallery__ingredient">Rau Má Nước · Copper Peptide · Exosome</span>
+                <div class="gallery__price">
+                  <span class="gallery__price-old">550.000₫</span>
+                  <span class="gallery__price-now">430.000₫</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="gallery__item">
+          <a href="https://savetheday.kr/product/true-rose-jericho-calming-shampoo/22/category/1/display/2/" target="_blank" class="gallery__link">
+            <div class="gallery__img-wrap">
+              <img src="6.png" alt="True Rose Jericho Calming Shampoo" class="gallery__img">
+            </div>
+            <div class="gallery__info">
+              <span class="gallery__category">Dầu gội · Da đầu khô & nhạy cảm</span>
+              <h3 class="gallery__name">True Rose Jericho Calming Shampoo</h3>
+              <p class="gallery__desc">Dầu gội cấp ẩm sâu với chiết xuất Hoa Hồng Sa Mạc Jericho (10,000ppm) và Glyceryl Glucoside. Phục hồi độ ẩm cho da đầu khô, hỗ trợ 6 loại phức hợp Protein giúp tóc mềm mượt.</p>
+              <div class="gallery__meta">
+                <span class="gallery__ingredient">Hoa Hồng Jericho · Glyceryl Glucoside · Protein 6x</span>
+                <div class="gallery__price">
+                  <span class="gallery__price-old">550.000₫</span>
+                  <span class="gallery__price-now">430.000₫</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="gallery__item">
+          <a href="https://savetheday.kr/product/water-hyssop-reinforcing-tonic/23/category/1/display/2/" target="_blank" class="gallery__link">
+            <div class="gallery__img-wrap">
+              <img src="10.png" alt="Water-Hyssop Reinforcing Tonic" class="gallery__img">
+            </div>
+            <div class="gallery__info">
+              <span class="gallery__category">Tonic dưỡng · Mọi loại da đầu</span>
+              <h3 class="gallery__name">Water-Hyssop Reinforcing Tonic</h3>
+              <p class="gallery__desc">Tonic dưỡng da đầu hàm lượng cao với chiết xuất Rau Má Nước (282,750ppm), Copper Peptide và Exosome. Làm sạch bã nhờn dư thừa, loại bỏ tế bào chết và kích thích mọc tóc khoẻ mạnh.</p>
+              <div class="gallery__meta">
+                <span class="gallery__ingredient">Rau Má Nước 282K ppm · Copper Peptide · Salicylic Acid</span>
+                <div class="gallery__price">
+                  <span class="gallery__price-old">470.000₫</span>
+                  <span class="gallery__price-now">310.000₫</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Quiz & Result Section -->
+  <section class="quiz page-section" id="quiz">
+    <div class="quiz__container">
+
+      <!-- Quiz Intro -->
+      <div class="quiz__intro active" id="quiz-intro">
+        <span class="quiz__intro-badge">KIỂM TRA DA ĐẦU</span>
+        <h2 class="quiz__intro-title">Khám phá loại da đầu của bạn</h2>
+        <p class="quiz__intro-desc">Chỉ mất 2 phút để hiểu rõ tình trạng da đầu và nhận đề xuất chăm sóc phù hợp.</p>
+        <button class="quiz__start-btn" id="quiz-start-btn">
+          Bắt đầu kiểm tra
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- Quiz Question Step -->
+      <div class="quiz__content" id="quiz-question-container">
+        <div class="quiz__card">
+          <!-- Header (Progress) -->
+          <div class="card__header">
+            <span class="card__step-text" id="quiz-step-text">Câu 1 / 6</span>
+            <span class="card__step-percent" id="quiz-step-percent">0%</span>
+          </div>
+          <div class="card__progress">
+            <div class="card__progress-fill" id="quiz-progress-fill"></div>
+          </div>
+
+          <!-- Questions Wrapper -->
+          <div class="card__body" id="quiz-questions-wrapper">
+
+            <!-- Q1 -->
+            <div class="quiz__q quiz__q--active" data-step="1">
+              <h2 class="q__title">Sau khi gội đầu, bao lâu thì da đầu bạn bắt đầu bết dầu?</h2>
+              <p class="q__desc">Hãy nghĩ về tình trạng thường ngày của bạn.</p>
+              <div class="q__options">
+                <label class="q__option"><input type="radio" name="q1" value="6h"><span class="q__radio"></span><span class="q__text">Trong vòng 6 giờ</span></label>
+                <label class="q__option"><input type="radio" name="q1" value="12h"><span class="q__radio"></span><span class="q__text">Sau khoảng 12 giờ</span></label>
+                <label class="q__option"><input type="radio" name="q1" value="24h"><span class="q__radio"></span><span class="q__text">Sau 1 ngày (24 giờ)</span></label>
+                <label class="q__option"><input type="radio" name="q1" value="more"><span class="q__radio"></span><span class="q__text">Hơn 1 ngày vẫn không bết</span></label>
+              </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="quiz__q" data-step="2">
+              <h2 class="q__title">Tình trạng rụng tóc của bạn hiện tại thế nào?</h2>
+              <p class="q__desc">Gần đây bạn có nhận thấy tóc rụng nhiều hơn bình thường không?</p>
+              <div class="q__options">
+                <label class="q__option"><input type="radio" name="q2" value="normal"><span class="q__radio"></span><span class="q__text">Bình thường, rụng ít</span></label>
+                <label class="q__option"><input type="radio" name="q2" value="medium"><span class="q__radio"></span><span class="q__text">Rụng khá nhiều khi gội, chải</span></label>
+                <label class="q__option"><input type="radio" name="q2" value="severe"><span class="q__radio"></span><span class="q__text">Rụng mảng lớn, tóc mỏng đi rõ rệt</span></label>
+              </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="quiz__q" data-step="3">
+              <h2 class="q__title">Bạn có thường xuyên cảm thấy ngứa hoặc có gàu không?</h2>
+              <p class="q__desc">Gàu và ngứa liên quan đến hệ vi sinh trên da đầu.</p>
+              <div class="q__options">
+                <label class="q__option"><input type="radio" name="q3" value="none"><span class="q__radio"></span><span class="q__text">Không có gàu, không ngứa</span></label>
+                <label class="q__option"><input type="radio" name="q3" value="little"><span class="q__radio"></span><span class="q__text">Thỉnh thoảng có gàu li ti, ngứa nhẹ</span></label>
+                <label class="q__option"><input type="radio" name="q3" value="lot"><span class="q__radio"></span><span class="q__text">Gàu mảng lớn, ngứa dai dẳng</span></label>
+              </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="quiz__q" data-step="4">
+              <h2 class="q__title">Da đầu bạn thường có cảm giác gì sau khi gội?</h2>
+              <p class="q__desc">Cảm nhận ngay sau khi gội xong và hong khô tóc.</p>
+              <div class="q__options">
+                <label class="q__option"><input type="radio" name="q4" value="fresh"><span class="q__radio"></span><span class="q__text">Mát mẻ, sảng khoái</span></label>
+                <label class="q__option"><input type="radio" name="q4" value="dry"><span class="q__radio"></span><span class="q__text">Khô căng, hơi rít</span></label>
+                <label class="q__option"><input type="radio" name="q4" value="oily"><span class="q__radio"></span><span class="q__text">Vẫn còn nhờn, chưa sạch hẳn</span></label>
+                <label class="q__option"><input type="radio" name="q4" value="sensitive"><span class="q__radio"></span><span class="q__text">Ngứa hoặc châm chích nhẹ</span></label>
+              </div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="quiz__q" data-step="5">
+              <h2 class="q__title">Bạn có thường xuyên tiếp xúc với yếu tố nào sau đây?</h2>
+              <p class="q__desc">Chọn yếu tố bạn gặp phải nhiều nhất mỗi ngày.</p>
+              <div class="q__options">
+                <label class="q__option"><input type="radio" name="q5" value="hot"><span class="q__radio"></span><span class="q__text">Nắng gắt / nóng ẩm thường xuyên</span></label>
+                <label class="q__option"><input type="radio" name="q5" value="helmet"><span class="q__radio"></span><span class="q__text">Đội mũ bảo hiểm nhiều giờ mỗi ngày</span></label>
+                <label class="q__option"><input type="radio" name="q5" value="pollution"><span class="q__radio"></span><span class="q__text">Môi trường ô nhiễm (bụi, khói xe)</span></label>
+                <label class="q__option"><input type="radio" name="q5" value="none"><span class="q__radio"></span><span class="q__text">Không thường xuyên tiếp xúc</span></label>
+              </div>
+            </div>
+
+            <!-- Q6 -->
+            <div class="quiz__q" data-step="6">
+              <h2 class="q__title">Bạn mong muốn cải thiện điều gì nhất cho da đầu?</h2>
+              <p class="q__desc">Chọn mục tiêu quan trọng nhất với bạn lúc này.</p>
+              <div class="q__options">
+                <label class="q__option"><input type="radio" name="q6" value="oil-control"><span class="q__radio"></span><span class="q__text">Kiểm soát dầu nhờn, giảm bết tóc</span></label>
+                <label class="q__option"><input type="radio" name="q6" value="moisture"><span class="q__radio"></span><span class="q__text">Cấp ẩm, giảm khô và kích ứng</span></label>
+                <label class="q__option"><input type="radio" name="q6" value="hair-loss"><span class="q__radio"></span><span class="q__text">Giảm rụng tóc, kích thích mọc tóc mới</span></label>
+                <label class="q__option"><input type="radio" name="q6" value="deep-clean"><span class="q__radio"></span><span class="q__text">Làm sạch sâu, loại bỏ gàu và bã nhờn</span></label>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Footer (Nav) -->
+          <div class="card__footer">
+            <button class="card__btn card__btn--back" id="quiz-btn-back" style="visibility: hidden;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+              Quay lại
+            </button>
+            <button class="card__btn card__btn--next" id="quiz-btn-next" disabled>
+              Tiếp theo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quiz Result Step -->
+      <div class="quiz__step quiz__step--result" id="quiz-result">
+        <div class="result__wrapper">
+          <!-- Left: Analysis -->
+          <div class="result__analysis">
+            <span class="quiz__badge" id="res-badge">KẾT QUẢ CỦA BẠN</span>
+            <h2 class="result__title" id="res-title">Da Đầu Dầu & Tổn Thương</h2>
+
+            <div class="result__box">
+              <h3 class="box__title">Nguyên nhân & Tình trạng</h3>
+              <p class="box__desc" id="res-desc"></p>
+            </div>
+
+            <div class="result__box result__box--warning">
+              <h3 class="box__title">Hệ quả nếu bỏ qua</h3>
+              <p class="box__desc" id="res-warning"></p>
+            </div>
+
+            <!-- Single Product Recommendation -->
+            <div class="result__product-single" id="result-product">
+              <!-- Populated by JS -->
+            </div>
+
+            <div class="result__action">
+              <button class="btn btn--primary" id="btn-build-routine">
+                XÂY DỰNG ROUTINE CỦA TÔI
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;margin-left:8px"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Form Page (Zoom Overlay) -->
+  <div class="form-page" id="form-page">
+    <button class="form-page__close" id="form-page-close" aria-label="Đóng">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="form-page__inner">
+      <div class="form-page__left">
+        <span class="form-page__badge">ROUTINE CỦA BẠN</span>
+        <h2 class="form-page__title">Nhận hướng dẫn chăm sóc<br>da đầu dành riêng cho bạn</h2>
+        <p class="form-page__desc">Để lại thông tin để nhận routine chăm sóc chi tiết và ưu đãi đặc biệt theo loại da đầu của bạn.</p>
+        <ul class="form-page__features">
+          <li><span class="fp-bullet"></span> Nhận routine chi tiết qua email</li>
+          <li><span class="fp-bullet"></span> Ưu đãi 15% cho đơn hàng đầu tiên</li>
+          <li><span class="fp-bullet"></span> Tips chăm sóc da đầu hàng tuần</li>
+          <li><span class="fp-bullet"></span> Thông báo sản phẩm mới sớm nhất</li>
+        </ul>
+        <!-- Recommended product preview -->
+        <div class="form-page__product" id="form-page-product"></div>
+      </div>
+      <div class="form-page__right">
+        <div class="form-page__form">
+          <div class="form-group">
+            <label>Họ và tên</label>
+            <input type="text" placeholder="Nhập họ và tên" id="lead-name">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="email@example.com" id="lead-email">
+          </div>
+          <div class="form-group">
+            <label>Số điện thoại <span style="color:#999;font-weight:400">(không bắt buộc)</span></label>
+            <input type="tel" placeholder="0912 345 678" id="lead-phone">
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="lead-consent">
+            <label for="lead-consent">Tôi đồng ý nhận thông tin chăm sóc da đầu và ưu đãi từ Save The Day. Bạn có thể huỷ đăng ký bất cứ lúc nào.</label>
+          </div>
+          <button class="form-page__submit" id="lead-submit">
+            Nhận hướng dẫn miễn phí
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Close menu">&times;</button>
+    <nav class="mobile-menu__nav">
+      <a href="#intro" class="mobile-menu__link">THỰC TRẠNG</a>
+      <a href="#problems" class="mobile-menu__link">VẤN ĐỀ</a>
+      <a href="#product-gallery" class="mobile-menu__link">SẢN PHẨM</a>
+      <a href="#quiz" class="mobile-menu__link">KHẢO SÁT</a>
+    </nav>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="https://savetheday.kr/web/upload/logo/logo.svg" alt="Save the day" class="footer__logo">
+          <p class="footer__tagline">Every peaceful day, naturally saved.</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <h4 class="footer__col-title">Khám phá</h4>
+            <a href="#intro" class="footer__link">Thực trạng</a>
+            <a href="#problems" class="footer__link">Vấn đề</a>
+            <a href="#product-gallery" class="footer__link">Sản phẩm</a>
+            <a href="#quiz" class="footer__link">Khảo sát da đầu</a>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__col-title">Liên hệ</h4>
+            <a href="mailto:hello@savetheday.kr" class="footer__link">hello@savetheday.kr</a>
+            <a href="https://savetheday.kr" target="_blank" class="footer__link">savetheday.kr</a>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__col-title">Theo dõi</h4>
+            <div class="footer__socials">
+              <a href="#" class="footer__social" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+              <a href="#" class="footer__social" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="#" class="footer__social" aria-label="YouTube">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Save The Day. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
