@@ -410,7 +410,12 @@ function autoSaveQuizResult(rec) {
     const answers = {};
     for (let i = 1; i <= totalSteps; i++) {
         const radio = document.querySelector(`input[name="q${i}"]:checked`);
-        answers[`cau_${i}`] = radio ? radio.value : '';
+        if (radio) {
+            const labelText = radio.closest('label')?.querySelector('.q__text')?.textContent?.trim() || radio.value;
+            answers[`cau_${i}`] = labelText;
+        } else {
+            answers[`cau_${i}`] = '';
+        }
     }
 
     const payload = {
