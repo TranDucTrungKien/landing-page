@@ -398,6 +398,38 @@ function getRecommendation(scores) {
 }
 
 // ============================================
+// Auto-save quiz answers (no form required)
+// ============================================
+function generateAnonHash() {
+    const ts = Date.now().toString(36);
+    const rnd = Math.random().toString(36).substring(2, 8);
+    return (ts + rnd).toUpperCase();
+}
+
+function autoSaveQuizResult(rec) {
+    const answers = {};
+    for (let i = 1; i <= totalSteps; i++) {
+        const radio = document.querySelector(`input[name="q${i}"]:checked`);
+        answers[`cau_${i}`] = radio ? radio.value : '';
+    }
+
+    const payload = {
+        ho_va_ten: generateAnonHash(),
+        email: '',
+        so_dien_thoai: '',
+        san_pham_de_xuat: rec.product?.name || '',
+        loai_da_dau: rec.title || '',
+        ...answers
+    };
+
+    fetch('https://hook.us2.make.com/j73u6gty647dgruanwbqdl5dcjszavf2', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+    }).catch(err => console.error('Auto-save quiz failed:', err));
+}
+
+// ============================================
 // Show Result
 // ============================================
 function showResult() {
@@ -434,6 +466,8 @@ function showResult() {
     }
 
     window.__quizRec = rec;
+
+    autoSaveQuizResult(rec);
 }
 
 // ============================================
