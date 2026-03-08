@@ -400,6 +400,8 @@ function getRecommendation(scores) {
 // ============================================
 // Auto-save quiz answers (no form required)
 // ============================================
+let __beaconSent = false;
+
 function generateAnonHash() {
     const ts = Date.now().toString(36);
     const rnd = Math.random().toString(36).substring(2, 8);
@@ -407,15 +409,13 @@ function generateAnonHash() {
 }
 
 function autoSaveQuizResult(rec) {
+    __beaconSent = true; // prevent double-save on tab close
     const answers = {};
     for (let i = 1; i <= totalSteps; i++) {
         const radio = document.querySelector(`input[name="q${i}"]:checked`);
-        if (radio) {
-            const labelText = radio.closest('label')?.querySelector('.q__text')?.textContent?.trim() || radio.value;
-            answers[`cau_${i}`] = labelText;
-        } else {
-            answers[`cau_${i}`] = '';
-        }
+        answers[`cau_${i}`] = radio
+            ? (radio.closest('label')?.querySelector('.q__text')?.textContent?.trim() || radio.value)
+            : '';
     }
 
     const payload = {
@@ -471,8 +471,7 @@ function showResult() {
     }
 
     window.__quizRec = rec;
-
-    autoSaveQuizResult(rec);
+    window.__formSubmitted = false;
 }
 
 // ============================================
@@ -507,6 +506,9 @@ if (btnBuildRoutine) {
 
 if (formPageClose) {
     formPageClose.addEventListener('click', () => {
+        if (!window.__formSubmitted && window.__quizRec) {
+            autoSaveQuizResult(window.__quizRec);
+        }
         formPage.classList.remove('is-active');
         document.body.style.overflow = '';
     });
@@ -553,6 +555,8 @@ if (leadSubmit) {
         })
         .then(res => {
             if (!res.ok) throw new Error('Webhook error');
+            window.__formSubmitted = true;
+            __beaconSent = true; // prevent double-save on tab close
             leadSubmit.innerHTML = `
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Đã gửi thành công!
@@ -569,6 +573,42 @@ if (leadSubmit) {
         });
     });
 }
+
+// ============================================
+// Save on tab close / navigate away (sendBeacon)
+// ============================================
+function buildAutoSavePayload(rec) {
+    const answers = {};
+    for (let i = 1; i <= totalSteps; i++) {
+        const radio = document.querySelector(`input[name="q${i}"]:checked`);
+        answers[`cau_${i}`] = radio
+            ? (radio.closest('label')?.querySelector('.q__text')?.textContent?.trim() || radio.value)
+            : '';
+    }
+    return JSON.stringify({
+        ho_va_ten: generateAnonHash(),
+        email: '',
+        so_dien_thoai: '',
+        san_pham_de_xuat: rec.product?.name || '',
+        loai_da_dau: rec.title || '',
+        ...answers
+    });
+}
+
+function trySendBeacon() {
+    if (__beaconSent || window.__formSubmitted || !window.__quizRec) return;
+    __beaconSent = true;
+    const payload = buildAutoSavePayload(window.__quizRec);
+    navigator.sendBeacon(
+        'https://hook.us2.make.com/j73u6gty647dgruanwbqdl5dcjszavf2',
+        new Blob([payload], { type: 'application/json' })
+    );
+}
+
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') trySendBeacon();
+});
+window.addEventListener('pagehide', trySendBeacon);
 
 // ============================================
 // Anchor Scroll (Navbar & Footer links)
