@@ -535,11 +535,21 @@ if (leadSubmit) {
             return;
         }
 
+        const answers = {};
+        for (let i = 1; i <= totalSteps; i++) {
+            const radio = document.querySelector(`input[name="q${i}"]:checked`);
+            answers[`cau_${i}`] = radio
+                ? (radio.closest('label')?.querySelector('.q__text')?.textContent?.trim() || radio.value)
+                : '';
+        }
+
         const formData = {
             ho_va_ten: name,
             email: email,
             so_dien_thoai: phone,
-            san_pham_de_xuat: window.__quizRec?.product?.name || ''
+            san_pham_de_xuat: window.__quizRec?.product?.name || '',
+            loai_da_dau: window.__quizRec?.title || '',
+            ...answers
         };
 
         leadSubmit.disabled = true;
@@ -548,7 +558,7 @@ if (leadSubmit) {
             Đang gửi...
         `;
 
-        fetch('https://hook.eu1.make.com/9skus9mu37nmozblh1v1oidtcmprkp5b', {
+        fetch('https://hook.us2.make.com/j73u6gty647dgruanwbqdl5dcjszavf2', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
